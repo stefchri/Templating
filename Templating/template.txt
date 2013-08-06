@@ -1,0 +1,45 @@
+﻿<table>
+	<tr>
+		<th colspan="2">Employees</th>
+	</tr>
+
+	<tr>
+		<td> 
+			{IF employee_name}
+			{employee_name}
+			{ENDIF}
+		</td>
+
+		<td>
+			{IF employee_department}
+			{employee_department}
+			{ENDIF}
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			{IF employee_contacts}
+			<table style="width:100%">
+				<tr>
+					<th  colspan="2">Contacts</th>
+				</tr>
+				{LOOP employee_contacts}
+				<tr>
+					<td>
+						{IF contact_name}
+						{contact_name}
+						{ENDIF}
+					</td>
+					<td>
+						{IF contact_phone}
+						{contact_phone}
+						{ENDIF}
+					</td>
+				</tr>
+				{ENDLOOP}
+			</table>
+			{ENDIF}
+		</td>
+	</tr>
+</table>
+
